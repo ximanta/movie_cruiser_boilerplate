@@ -1,0 +1,8 @@
+{
+  "workflow": "OpenJDK8SpringAngularMySQLApp",
+  "scores": {
+    "cadetTests": 40,
+    "commanderTests": 50,
+    "tslint": 10
+  }
+}

@@ -1,0 +1,18 @@
+<div class="container" *ngIf="discTV.length > 0">
+  <h1 class="text-center">The most popular TV Shows right now! </h1>
+  <br>
+  <div class="row card-group">
+    <div class="col-4" *ngFor="let movie of discTV">
+      <div class="card text-center">
+        <a (click)="goToDetailTV(movie.id)">
+          <div class="media">
+            <img class="d-flex mr-3 img-responsive" src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="{{movie.title}}">
+            <div class="media-body">
+              <h5 class="mt-0">{{movie.original_name}} ({{movie.first_air_date| date:'y'}})</h5>
+              <p>Rating: {{movie.vote_average}} ({{movie.vote_count}})</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>

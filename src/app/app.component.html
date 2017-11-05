@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container">
+    <a class="navbar-brand" href="#">{{ title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/watchlist']" [routerLinkActive]="['active']">Your Watchlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/discover-movies']" [routerLinkActive]="['active']">Discover Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/discover-tv']" [routerLinkActive]="['active']">Discover TV</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input name="Searchbox" [(ngModel)]="searchQuery" #searchBox id="search-box" class="form-control" (keyup.enter)="search();searchBox.value=''" type="text" placeholder="Search" aria-label="Search">
+        <button id="search-button" type="button" class="btn btn-primary text-center" (click)="search()">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<br>
+<br>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        <h4>Copyright © 2017 Movie Cruiser. </h4>
+        <h4>All rights reserved. </h4>
+      </div>
+      <div class="col-sm-6 text-center">
+        <h4>About Us</h4>
+        <p>Movie Cruiser is the ultimate movie database.</p>
+      </div>
+    </div>
+    <!--End of row -->
+  </div>
+  <!--End of container -->
+</footer>
